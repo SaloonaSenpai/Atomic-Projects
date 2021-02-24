@@ -4,3 +4,6 @@ and no need to add HTTPs:// to url bar
 
 set icon for all 
 i want to be able to enter without .com
+
+
+be able to drag links to the url bar 
