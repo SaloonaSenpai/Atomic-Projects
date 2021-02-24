@@ -1,32 +1,11 @@
-**** Project ****
-[] browser 
-[] 2D game  
-[] web scraper 
-[] discord bot 
-[] automated bot
+the url bars now check if there is http or https and adds it 
+
+things to do
+-history 
+-better url bar 
+-change back, forward, reload to be better 
+-separate the running from the class
 
 
-
-**** Browser ****
-name : dont know 
-version : 0.0.1
-last update : 24 / 2 / 21
-
-
->>> user interface <<<
-    [] back button
-    [] foward button
-    [] url bar 
-    [] home
-    [] bookmark 
-    [] favorite 
-    [] history 
-    [] setting
-    
-
->>> things to learn <<<
-    [] API
-    [] http requests 
-    [] cookies 
 
 
