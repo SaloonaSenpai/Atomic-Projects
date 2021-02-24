@@ -1,0 +1,32 @@
+**** Project ****
+[] browser 
+[] 2D game  
+[] web scraper 
+[] discord bot 
+[] automated bot
+
+
+
+**** Browser ****
+name : dont know 
+version : 0.0.1
+last update : 24 / 2 / 21
+
+
+>>> user interface <<<
+    [] back button
+    [] foward button
+    [] url bar 
+    [] home
+    [] bookmark 
+    [] favorite 
+    [] history 
+    [] setting
+    
+
+>>> things to learn <<<
+    [] API
+    [] http requests 
+    [] cookies 
+
+
