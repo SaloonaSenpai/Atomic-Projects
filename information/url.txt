@@ -1,0 +1,6 @@
+better url bar:
+i want the font size to change 
+and no need to add HTTPs:// to url bar 
+
+set icon for all 
+i want to be able to enter without .com

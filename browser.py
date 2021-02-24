@@ -36,38 +36,48 @@ class Mainwindow(QMainWindow):
         
         #back button 
         back_btn = QAction('back',self)    #declaring the back btn using action 
+        back_btn.setIcon(QtGui.QIcon('icons/back_buttonx2.png')) #putting an icon 
         back_btn.triggered.connect(self.browser.back)   #when its triggered connect to the browser and go back [type of connect is back]
         navbar.addAction(back_btn)  #adding it to the navbar 
         
         
         #forward 
         forward_btn = QAction('forward',self) #declaring the foward btn using action 
+        forward_btn.setIcon(QtGui.QIcon('icons/foward_buttonx2.png')) #putting an icon 
         forward_btn.triggered.connect(self.browser.forward) #when its triggered connect to the browser and go forward [type of connect is forward]
         navbar.addAction(forward_btn)
         
         #reload 
         reload_btn = QAction("reload",self) #declaring the reload btn using action 
+        reload_btn.setIcon(QtGui.QIcon('icons/reload.png')) #putting an icon 
         reload_btn.triggered.connect(self.browser.reload)   #connect reload when tiggered
         navbar.addAction(reload_btn)    #add it to the navbar
         
         #stop 
-        stop_btn = QAction("X",self)
-        stop_btn.triggered.connect(self.browser.stop)
-        navbar.addAction(stop_btn)
+        stop_btn = QAction("Stop",self) #declaring the stop btn
+        stop_btn.setIcon(QtGui.QIcon('icons/stop.png'))   #setting an icon for the 
+        stop_btn.triggered.connect(self.browser.stop)   #connect stop when triggered
+        navbar.addAction(stop_btn)  #add it to the navbar 
+        
         
 
         #nav url_bar 
         self.url_bar = QLineEdit()   #text line to write in
         self.url_bar.setFixedSize(500,20)   #resizing the bar
+        font = QtGui.QFont("Times", 10)
+        self.url_bar.setFont(font)
         self.url_bar.setStyleSheet("QLineEdit { border-radius: 5px; }")    #adding radius to the bar
         self.url_bar.returnPressed.connect(self.navi_to_url)    #when return is pressed, connect to specific thing that would be a method
         navbar.addWidget(self.url_bar)  #adding the url bar to the navbar
+        self.history_list = []
+        
         
         #if url has changed you need to update the URL BAR
         self.browser.urlChanged.connect(self.update_url_bar)
 
         #Home 
         home_btn = QAction("Home",self)
+        home_btn.setIcon(QtGui.QIcon('icons/home.png'))
         home_btn.triggered.connect(self.navi_home)  #when clicking on this home button, a method would be running
         navbar.addAction(home_btn)
         
@@ -92,7 +102,8 @@ class Mainwindow(QMainWindow):
             url = 'https://' + str(url)
             
         self.browser.setUrl(QUrl(url))  #set the url to the url text from the line edit written 
-    
+        self.history_list.append(url)
+        
     #takes a paramter
     def update_url_bar(self, q):
         self.url_bar.setText(q.toString())  #to string to make sure its a string
@@ -112,3 +123,5 @@ QApplication.setApplicationName("Disconnect")
 window = Mainwindow()
 #execute 
 app.exec_()
+
+print(window.history_list)

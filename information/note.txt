@@ -28,5 +28,6 @@ last update : 24 / 2 / 21
     [] API
     [] http requests 
     [] cookies 
+    [] caches
 
 
