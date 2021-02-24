@@ -1,0 +1,11 @@
+the url bars now check if there is http or https and adds it 
+
+things to do
+-history 
+-better url bar 
+-change back, forward, reload to be better 
+-separate the running from the class
+
+
+
+
