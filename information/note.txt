@@ -31,3 +31,12 @@ last update : 24 / 2 / 21
     [] caches
 
 
+browser contains 4 classes
+1. browser window
+2. Tabs
+3. Web view
+4. Web Page 
+5. download manager 
+
+
+

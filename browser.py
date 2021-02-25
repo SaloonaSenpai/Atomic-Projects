@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import *
 from urllib.parse import urlsplit, urlparse
 from PyQt5 import QtGui
 
-
+""" ///////// MAIN WINDOW CLASS /////    """
 
 #inherits from the qmain window 
 class Mainwindow(QMainWindow):
@@ -23,14 +23,18 @@ class Mainwindow(QMainWindow):
         #adding an icon for the browser
         self.setWindowIcon(QtGui.QIcon('icons\logo.jpg')) 
 
+        title = QLabel("Disconnect")
+        title_font = QtGui.QFont("Times", 18)
+        title.setFont(title_font)
+
+
         # //// adding tool bars  //// 
         
         #navbars 
         navbar = QToolBar()
+        navbar.setFixedHeight(35)   #resizing the height of the navbar
         #adding a navbar
         self.addToolBar(navbar)
-    
-    
         
         #adding some tool bars
         
@@ -63,7 +67,7 @@ class Mainwindow(QMainWindow):
 
         #nav url_bar 
         self.url_bar = QLineEdit()   #text line to write in
-        self.url_bar.setFixedSize(500,20)   #resizing the bar
+        self.url_bar.setFixedSize(500,30)   #resizing the bar
         font = QtGui.QFont("Times", 10)
         self.url_bar.setFont(font)
         self.url_bar.setStyleSheet("QLineEdit { border-radius: 5px; }")    #adding radius to the bar
@@ -85,6 +89,8 @@ class Mainwindow(QMainWindow):
         #history = QWebEngineHistory()
         #home_btn.triggered.connect(self.browser.history)
         #navbar.addWidget(self.history_btn) 
+        
+        
 
         
         
@@ -118,7 +124,7 @@ class Mainwindow(QMainWindow):
 #creating an app taking an arugment from the system 
 app = QApplication(argv)
 #Naming the browser 
-QApplication.setApplicationName("Disconnect")
+QApplication.setApplicationName(window.title)
 #creating the object 
 window = Mainwindow()
 #execute 
